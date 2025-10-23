@@ -7,7 +7,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import NotificationsPage from "./pages/NotificationsPage.jsx";
 import CallPage from "./pages/CallPage.jsx";
 import ChatPage from "./pages/ChatPage.jsx";
-import OnboardingPage from "./pages/OnboardingPage.jsx"
+import OnBoardingPage from "./pages/OnBoardingPage.jsx"
 
 
 import { Toaster } from "react-hot-toast";
@@ -94,7 +94,7 @@ const App = () => {
           element={
             isAuthenticated ? (
               !isOnboarded ? (
-                <OnboardingPage />
+                <OnBoardingPage />
               ) : (
                 <Navigate to="/" />
               )
