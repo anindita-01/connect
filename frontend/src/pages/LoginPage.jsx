@@ -65,7 +65,7 @@ const LoginPage = () => {
                 <div>
                   <h2 className="text-xl font-semibold">Welcome Back</h2>
                   <p className="text-sm opacity-70">
-                    Sign in to your account to continue your language journey
+                    Sign in to your account to continue
                   </p>
                 </div>
 
@@ -128,13 +128,13 @@ const LoginPage = () => {
           <div className="max-w-md p-8">
             {/* Illustration */}
             <div className="relative aspect-square max-w-sm mx-auto">
-              <img src="/signup.png" alt="Language connection illustration" className="w-full h-full" />
+              <img src="/signup.png" alt="connection illustration" className="w-full h-full" />
             </div>
 
             <div className="text-center space-y-3 mt-6">
-              <h2 className="text-xl font-semibold">Connect with language partners worldwide</h2>
+              <h2 className="text-xl font-semibold">Connect with people worldwide</h2>
               <p className="opacity-70">
-                Practice conversations, make friends, and improve your language skills together
+                 Converse, make friends together
               </p>
             </div>
           </div>

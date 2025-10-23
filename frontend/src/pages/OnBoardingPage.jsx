@@ -3,7 +3,7 @@ import useAuthUser from "../hooks/useAuthUser";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import { completeOnboarding } from "../lib/api";
-import { CameraIcon, LoaderIcon, MapPinIcon, ShipWheelIcon, ShuffleIcon } from "lucide-react";
+import { CameraIcon, LoaderIcon, MapPinIcon, ShuffleIcon } from "lucide-react";
 
 
 const OnboardingPage = () => {
@@ -13,8 +13,6 @@ const OnboardingPage = () => {
   const [formState, setFormState] = useState({
     fullName: authUser?.fullName || "",
     bio: authUser?.bio || "",
-    nativeLanguage: authUser?.nativeLanguage || "",
-    learningLanguage: authUser?.learningLanguage || "",
     location: authUser?.location || "",
     profilePic: authUser?.profilePic || "",
   });
@@ -55,7 +53,7 @@ const OnboardingPage = () => {
             {/* PROFILE PIC CONTAINER */}
             <div className="flex flex-col items-center justify-center space-y-4">
               {/* IMAGE PREVIEW */}
-              <div className="size-32 rounded-full bg-base-300 overflow-hidden">
+              <div className="w-32 h-32 rounded-full bg-base-300 overflow-hidden">
                 {formState.profilePic ? (
                   <img
                     src={formState.profilePic}
@@ -64,7 +62,7 @@ const OnboardingPage = () => {
                   />
                 ) : (
                   <div className="flex items-center justify-center h-full">
-                    <CameraIcon className="size-12 text-base-content opacity-40" />
+                    <CameraIcon className="w-12 h-12 text-base-content opacity-40" />
                   </div>
                 )}
               </div>
@@ -72,7 +70,7 @@ const OnboardingPage = () => {
               {/* Generate Random Avatar BTN */}
               <div className="flex items-center gap-2">
                 <button type="button" onClick={handleRandomAvatar} className="btn btn-accent">
-                  <ShuffleIcon className="size-4 mr-2" />
+                  <ShuffleIcon className="w-4 h-4 mr-2" />
                   Generate Random Avatar
                 </button>
               </div>
@@ -115,7 +113,7 @@ const OnboardingPage = () => {
                 <span className="label-text">Location</span>
               </label>
               <div className="relative">
-                <MapPinIcon className="absolute top-1/2 transform -translate-y-1/2 left-3 size-5 text-base-content opacity-70" />
+                <MapPinIcon className="absolute top-1/2 transform -translate-y-1/2 left-3 w-5 h-5 text-base-content opacity-70" />
                 <input
                   type="text"
                   name="location"
@@ -137,7 +135,7 @@ const OnboardingPage = () => {
                 </>
               ) : (
                 <>
-                  <LoaderIcon className="animate-spin size-5 mr-2" />
+                  <LoaderIcon className="animate-spin w-5 h-5 mr-2" />
                   Onboarding...
                 </>
               )}
